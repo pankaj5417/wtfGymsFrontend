@@ -1,11 +1,12 @@
 .sidebar {
   /* flex: 0.7; */
-
+position: fixed;
+top: 80px;
+left: 0;
   height: calc(100vh - 50px);
   overflow-y: scroll;
   margin-left: 0;
-  top: 5px;
-  left: 0;
+  display: none;
   color: white;
   font-weight: 400;
 }

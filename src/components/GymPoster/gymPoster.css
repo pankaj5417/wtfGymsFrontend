@@ -1,7 +1,8 @@
 .gymPosterContainer{
     width: 100%;
+    min-width: 700px;
     background-color: #5e0707;
-    background: linear-gradient(#5e0707, #1c18187b);
+    background: linear-gradient(45deg,#5e0707, #1c18187b);
     height: 70vh;
 
 }
@@ -23,7 +24,7 @@
     position: absolute;
     
     font-weight: 800;
-    color: #530a0aeb;
+    color: #571010eb;
     margin-top: 180px;
     left: 10px;
 }

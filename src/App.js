@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <GymPoster/>
-      {/* <Sidebar/> */}
+      <Sidebar/>
       <GymType/>
       <Routes>
       {/* <Route path="/" element={<Login/>}></Route> 

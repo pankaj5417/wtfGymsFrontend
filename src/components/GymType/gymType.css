@@ -1,5 +1,6 @@
 .gymTypeContainer {
   width: 95%;
+  min-width: 700px;
   margin: auto;
 }
 .searchContainer {
@@ -9,11 +10,33 @@
   border: 3px solid white;
   border-radius: 5px;
   display: flex;
+  padding: 0 5px;
 
   align-items: center;
 }
+.searchIcon {
+    width: 25px;
+    color: white;
+
+  }
+  .locationIcon {
+    width: 30px;
+    border-radius: 5px;
+    padding: 7px;
+    text-align: center;
+    background-color: #5e0707;
+    color: white;
+  }
+.clear-button{
+    width: 80px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: #5e0707;
+}
+
 .searchGyms {
-  width: 86%;
+  width: 87%;
   color: white;
   border: none;
   outline: none;
@@ -36,6 +59,8 @@
 }
 .gymResults {
   width: 67%;
+  height: 80vh;
+  overflow-y: scroll;
   color: white;
 }
 .gymResultsContainer {
@@ -81,7 +106,7 @@
 
   border: 2px solid lightgray;
   border-radius: 5px;
-  padding: 3px;
+  padding:0 5px;
   display: flex;
   background-color: rgba(42, 40, 41, 0.42);
 
