@@ -1,6 +1,7 @@
 .gymPosterContainer{
     width: 100%;
-    background-color: red;
+    background-color: #5e0707;
+    background: linear-gradient(#5e0707, #1c18187b);
     height: 70vh;
 
 }
@@ -8,9 +9,32 @@
     position: absolute;
     left: 20%;
     top: 100px;
+    z-index: 999;
 }
 .runningBoyImg{
     position: absolute;
     left: 65%;
     top: 190px;
+    z-index: 99;
+}
+.poweredText{
+    width: 500px;
+    font-size: 250px;
+    position: absolute;
+    
+    font-weight: 800;
+    color: #530a0aeb;
+    margin-top: 180px;
+    left: 10px;
+}
+
+.gymText{
+    width: 200px;
+    font-size: 200px;
+    position: absolute;
+    font-weight: 800;
+    color: white;
+    margin-top: 350px;
+    left: 71%;
+    z-index: 999;
 }

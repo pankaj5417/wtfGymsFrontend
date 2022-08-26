@@ -7,6 +7,7 @@ export const GymType = () => {
 
     useEffect(()=>{
    getGymData()
+   getGymPlan()
     },[])
 
     async function getGymData(){
@@ -16,6 +17,21 @@ export const GymType = () => {
       setgymData(data.data)
     }
 
+    async function getGymPlan(){
+        const res=await fetch("https://wtfup.me/gym_details/WTF-The-Fitness-Point-Gym/gym/plan",{
+            method:"POST",
+        
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify("GLKdIYAWDS2Q8")
+            
+        })
+        const data=await res.json()
+        console.log("planData",data)
+        
+      }
+//https://wtfup.me/gym_details/WTF-The-Fitness-Point-Gym/gym/plan
   return (
     <>
       <div className="gymTypeContainer">
@@ -55,10 +71,23 @@ export const GymType = () => {
                 gymData?.map(data=>(
                     <>
                     <div className="gymResultsContainer">
+                        <div className="gymFreeGif">
+                            <img className="freeGifImg" src="https://wtfup.me/assets/assets/gif/free.gif" alt="gymFreeGif" />
+
+                        </div>
+                        <div className="gymInfo">
                     <h2>{data.gym_name}</h2>
                     <p>{data.rating}</p>
                     <p>{data.address1+","+data.address2}</p>
                     <p>{data.duration_text+""+data.distance_text}</p>
+
+                    <div className="gymPrice">
+                        <h2>{"3000 for 3 months"}</h2>
+                        <button className="bookNow-button">Book Now</button>
+
+                    </div>
+
+                        </div>
 
                     </div>
                     </>

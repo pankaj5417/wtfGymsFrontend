@@ -1,6 +1,6 @@
-.gymTypeContainer{
-    width: 95%;
-   margin: auto;
+.gymTypeContainer {
+  width: 95%;
+  margin: auto;
 }
 .searchContainer {
   width: 90%;
@@ -33,22 +33,47 @@
   width: 25%;
   color: white;
   padding: 2rem;
-  border: 1px solid white;
 }
 .gymResults {
   width: 67%;
-  border: 1px solid white;
   color: white;
 }
-.gymResultsContainer{
-    width: 98%;
-    height: 310px;
-    border-radius: 8px;
-    /* padding: 2px; */
-    opacity: 0.5s;
-    margin: 6px;
-
-    background-color: gray;
+.gymResultsContainer {
+  width: 98%;
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+ 
+ 
+  margin: 4px;
+  background-color: rgba(42, 40, 41, 0.42);
+ 
+}
+.freeGifImg {
+  width: 100px;
+  height: 90px;
+}
+.gymFreeGif {
+  width: 50%;
+}
+.gymInfo {
+  width: 50%;
+}
+.gymPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 60px;
+}
+.bookNow-button {
+  width: 130px;
+  height: 50px;
+  padding: 3px;
+  color: white;
+  font-size: 18px;
+  background-color: #5e0707;
+  border-radius: 5px;
 }
 .searchFilter {
   width: 90%;
@@ -58,7 +83,7 @@
   border-radius: 5px;
   padding: 3px;
   display: flex;
-  background-color: #424242;
+  background-color: rgba(42, 40, 41, 0.42);
 
   align-items: center;
 }
@@ -74,7 +99,7 @@
 
   color: white;
 
-  background-color: #424242;
+  background-color: transparent;
 }
 .PriceTextBox {
   width: 100px;
@@ -87,7 +112,7 @@
   color: white;
   border: 2px solid lightgray;
 
-  background-color: #424242;
+  background-color: rgba(42, 40, 41, 0.42);
 }
 .selectCity {
   width: 90%;
@@ -99,6 +124,5 @@
   color: white;
   border: 2px solid lightgray;
 
-  background-color: #424242;
+  background-color: rgba(42, 40, 41, 0.42);
 }
-
