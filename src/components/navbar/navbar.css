@@ -1,0 +1,94 @@
+
+.navbarContainer {
+    height: 80px;
+    width: 100%;
+    background-color: black;
+  
+    /* padding: 5px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  
+  .navbarLeft {
+    width: 180px;
+    color: white;
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: white; */
+  }
+  .wtf-logo{
+    width: 100px;
+  }
+  /* .navbarCenter{
+    width:320px;
+    height: 65px;
+   display: flex;
+   align-items: center;
+
+    margin-left: 30%;
+    color: white;
+
+
+  }
+  .navbarSearchBox{
+    width: 320px;
+    height: 65px;
+    margin-top: 0px;
+    background-color:#415165 ;
+
+  }
+   .navbarSearchInput:hover{
+    background: #2C3E50;
+  }
+  .navbarSearchInput{
+    width: 320px;
+    height: 65px;
+   background-color:#415165 ;
+   padding: 0 10px;
+   outline: none;
+   color: white;
+   border: none;
+  }
+  .searchIcon{
+    color: #607D8B;
+    
+  } */
+  ::placeholder { 
+    font-size: 18px;
+    color:#607D8B;
+    opacity: 1; 
+  }
+  .navbarRight {
+    width:780px;
+    font-weight: 200;
+    margin-right:70px;
+   color: #607D8B;
+   font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  .navbarRightText{
+    color:grey;
+  }
+  .login-button{
+    width: 80px;
+    height: 40px;
+    font-size: 23px;
+    background-color: red;
+    font-weight: 100;
+    color: lightgray;
+    border-radius: 6px;
+  }
+  
+  ul {
+    list-style: none;
+  }

@@ -1,0 +1,16 @@
+.gymPosterContainer{
+    width: 100%;
+    background-color: red;
+    height: 70vh;
+
+}
+.runningGirlImg{
+    position: absolute;
+    left: 20%;
+    top: 100px;
+}
+.runningBoyImg{
+    position: absolute;
+    left: 65%;
+    top: 190px;
+}
