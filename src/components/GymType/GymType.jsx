@@ -11,7 +11,7 @@ export const GymType = () => {
   const handleChange = (e) => {
     const inputVal = e.target.value;
 
-    debounceGymData(inputVal);
+    debounceGymData(inputVal.toLocaleLowerCase());
   };
 
   const debounceGymData = debounce((query) => {
@@ -20,12 +20,13 @@ export const GymType = () => {
 
   useEffect(() => {
     getGymData();
-    getGymPlan();
+    // getGymPlan();
   }, []);
 
   async function getGymData() {
     const res = await fetch(
-      "https://devapi.wtfup.me/gym/nearestgym?lat=30.325488815850512&long=78.0042384802231"
+    //   "https://devapi.wtfup.me/gym/nearestgym?lat=28.596923663299105&long=77.32872149880232&type=gym"
+      "https://api.wtfup.me/gym/nearestgym?lat=28.596923663299105&long=77.32872149880232&type=gym"
     );
     const data = await res.json();
     console.log("gym1", data);
@@ -34,13 +35,14 @@ export const GymType = () => {
 
   async function getGymData2(gymname) {
     const res = await fetch(
-      `https://devapi.wtfup.me/gym/places?lat=30.325488815850512&long=78.0042384802231&city="New Delhi"`
+      `https://api.wtfup.me/gym/nearestgym?lat=28.596923663299105&long=77.32872149880232&gym_name=${gymname}`
+    //   `https://devapi.wtfup.me/gym/nearestgym?lat=30.325488815850512&long=78.0042384802231&city=${gymname}`
     );
     const data = await res.json();
-    console.log("gym2", data);
-    setgymData(data.data);
+    console.log("gym2", data.data);
+    setgymData(data.data.filter(d=>d.gym_name.toLocaleLowerCase().includes(gymname)));
   }
-
+/*
   async function getGymPlan() {
     const res = await fetch(
       "https://wtfup.me/gym_details/WTF-The-Fitness-Point-Gym/gym/plan",
@@ -57,6 +59,7 @@ export const GymType = () => {
     const data = await res.json();
     console.log("planData", data);
   }
+  */
 
   return (
     <>
