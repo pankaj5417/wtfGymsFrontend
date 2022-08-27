@@ -9,13 +9,13 @@
 .runningGirlImg{
     position: absolute;
     left: 20%;
-    top: 100px;
+    top: 96px;
     z-index: 999;
 }
 .runningBoyImg{
     position: absolute;
     left: 65%;
-    top: 190px;
+    top: 185px;
     z-index: 99;
 }
 .poweredText{
@@ -35,8 +35,8 @@
     position: absolute;
     font-weight: 800;
     color: white;
-    margin-top: 350px;
-    left: 70%;
+    margin-top: 346px;
+    left: 68%;
     z-index: 999;
 }
 @media screen and (max-width:768px) {
