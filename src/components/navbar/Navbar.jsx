@@ -19,12 +19,13 @@ export const Navbar = () => {
                 class="fa fa-align-left hamBar"
                 aria-hidden="true"
               ></i>
-
+              <Link to="/">
               <img
                 className="wtf-logo"
                 src="https://wtfup.me/assets/assets/logo.png"
                 alt="wtf"
               />
+              </Link>
             </li>
           </ul>
         </div>
