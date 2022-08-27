@@ -25,7 +25,7 @@ export const GymType = () => {
 
   async function getGymData() {
     const res = await fetch(
-    //   "https://devapi.wtfup.me/gym/nearestgym?lat=28.596923663299105&long=77.32872149880232&type=gym"
+    
       "https://api.wtfup.me/gym/nearestgym?lat=28.596923663299105&long=77.32872149880232&type=gym"
     );
     const data = await res.json();
@@ -36,7 +36,7 @@ export const GymType = () => {
   async function getGymData2(gymname) {
     const res = await fetch(
       `https://api.wtfup.me/gym/nearestgym?lat=28.596923663299105&long=77.32872149880232&gym_name=${gymname}`
-    //   `https://devapi.wtfup.me/gym/nearestgym?lat=30.325488815850512&long=78.0042384802231&city=${gymname}`
+   
     );
     const data = await res.json();
     console.log("gym2", data.data);
@@ -104,9 +104,9 @@ export const GymType = () => {
             </select>
           </div>
           <div className="gymResults">
-            {gymData?.map((data) => (
+            {gymData?.map((data,index) => (
               <>
-                <div className="gymResultsContainer">
+                <div key={index} className="gymResultsContainer">
                   <div className="gymFreeGif">
                     <img
                       className="freeGifImg"
@@ -147,7 +147,7 @@ export const GymType = () => {
                     </p>
 
                     <div className="gymPrice">
-                      <h2>{"₹3000 for 3 months"}</h2>
+                      <h3 style={{color:"#FBC02D",fontWeight:"700"}}>{data.plan_price?"₹ "+data.plan_price+" for 3 months":""}</h3>
                       <button className="bookNow-button">Book Now</button>
                     </div>
                   </div>
