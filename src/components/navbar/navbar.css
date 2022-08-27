@@ -47,7 +47,11 @@
 .navbarRightText {
   color: grey;
 }
-.navbarRightText:hover{
+.navbarRight > li > a.active,
+.navbarRight > li > a:focus {
+  border-bottom: 0.1875rem solid #5e0707;
+}
+.navbarRightText:hover {
   color: white;
 }
 .login-button {
@@ -77,4 +81,7 @@ ul {
   .navbarRight > li {
     display: none;
   }
+}
+a {
+  text-decoration: none;
 }

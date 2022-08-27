@@ -52,3 +52,20 @@ gap: 15px;
     padding: 30px;
 
 }
+
+@media screen and (max-width: 768px) {
+    .gymPlan {
+      display: block;
+    }
+    .gymPlanDesc{
+      width: 90%;
+      padding: 20px;
+    }
+    .gymPlanMembership{
+        width: 90%;
+        padding: 20px;
+
+       
+        overflow-y: unset;
+    }
+  }

@@ -14,11 +14,8 @@ export const Navbar = () => {
         <div>
           <ul className="navbarLeft">
             <li className="navbarLeft">
-              <i
-                onClick={handlOpenSidebar}
-                class="fa fa-align-left hamBar"
-                aria-hidden="true"
-              ></i>
+             
+              <i onClick={handlOpenSidebar} class="fa fa-th-large fa-2x hamBar" aria-hidden="true"></i>
               <Link to="/">
               <img
                 className="wtf-logo"
@@ -33,29 +30,21 @@ export const Navbar = () => {
         <div>
           <ul className="navbarRight">
             <li>
-              <Link to="" style={{ textDecoration: "none", color: "white" }}>
-                <span className="navbarRightText">Fitness</span>{" "}
-              </Link>
+              
+                <a href="#fitness" className="navbarRightText">Fitness</a>{" "}
+              
             </li>
             <li>
-              <Link to="" style={{ textDecoration: "none", color: "white" }}>
-                <span className="navbarRightText">Nutrition</span>{" "}
-              </Link>
+                <a href="#nutrition" className="navbarRightText">Nutrition</a>{" "}
             </li>
             <li>
-              <Link to="" style={{ textDecoration: "none", color: "white" }}>
-                <span className="navbarRightText">Gyms</span>{" "}
-              </Link>
+                <a href="#gym" className="navbarRightText">Gyms</a>{" "}
             </li>
             <li>
-              <Link to="" style={{ textDecoration: "none", color: "white" }}>
-                <span className="navbarRightText">Become WTF Partner</span>{" "}
-              </Link>
+                <a href="#wtf" className="navbarRightText">Become WTF Partner</a>{" "}
             </li>
             <li>
-              <Link to="" style={{ textDecoration: "none", color: "white" }}>
-                <span className="navbarRightText">About Us</span>{" "}
-              </Link>
+                <a href="#about" className="navbarRightText">About Us</a>{" "}
             </li>
             <div className="loginRegisterButtonContainer">
               <button className="login-button">Login</button>

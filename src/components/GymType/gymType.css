@@ -175,11 +175,12 @@ button {
       display: block;
     }
     .gymFilters{
-      width: 100%;
+      width: 90%;
+      margin: auto;
     }
     .gymResults{
-        width: 100%;
-        margin-left: 40px;
+        width: 90%;
+       margin: auto;
        
         overflow-y: unset;
     }
