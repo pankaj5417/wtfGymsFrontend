@@ -5,14 +5,15 @@ import { debounce } from "lodash";
 import "./gymType.css";
 export const GymType = () => {
   const [gymData, setgymData] = useState();
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
 
   const handleChange = (e) => {
     const inputVal = e.target.value;
 
-    
     debounceGymData(inputVal);
   };
-  
+
   const debounceGymData = debounce((query) => {
     getGymData2(query);
   }, 1000);
@@ -32,7 +33,9 @@ export const GymType = () => {
   }
 
   async function getGymData2(gymname) {
-    const res = await fetch(`https://devapi.wtfup.me/gym/places?lat=30.325488815850512&long=78.0042384802231&city="New Delhi"`);
+    const res = await fetch(
+      `https://devapi.wtfup.me/gym/places?lat=30.325488815850512&long=78.0042384802231&city="New Delhi"`
+    );
     const data = await res.json();
     console.log("gym2", data);
     setgymData(data.data);
@@ -110,10 +113,35 @@ export const GymType = () => {
                   </div>
                   <div className="gymInfo">
                     <h2>{data.gym_name}</h2>
-                    <p>{data.rating}</p>
-                    <p style={{fontSize:"23px",}}>{data.address1 + "," + data.address2}</p>
-                    <p><i class="fa fa-paper-plane sendIcon" aria-hidden="true">&nbsp;</i>
-                    {data.duration_text + " away | " + data.distance_text}</p>
+                    <p>
+                      {" "}
+                      {[...Array(5)].map((star, index) => {
+                        index += 1;
+                        return (
+                          <button
+                            type="button"
+                            key={index}
+                            className={
+                              index <= (hover || data.rating) ? "on" : "off"
+                            }
+                            // onClick={() => setRating(index)}
+                            // onMouseEnter={() => setHover(index)}
+                            // onMouseLeave={() => setHover(rating)}
+                          >
+                            <span className="star">&#9733;</span>
+                          </button>
+                        );
+                      })}
+                    </p>
+                    <p style={{ fontSize: "23px" }}>
+                      {data.address1 + "," + data.address2}
+                    </p>
+                    <p>
+                      <i class="fa fa-paper-plane sendIcon" aria-hidden="true">
+                        &nbsp;
+                      </i>
+                      {data.duration_text + " away | " + data.distance_text}
+                    </p>
 
                     <div className="gymPrice">
                       <h2>{"₹3000 for 3 months"}</h2>
