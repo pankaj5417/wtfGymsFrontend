@@ -2,6 +2,7 @@ import {Route,Routes} from 'react-router-dom'
 import './App.css';
 import { GymPoster } from './components/GymPoster/GymPoster';
 import { GymType } from './components/GymType/GymType';
+import LoginModal from './components/loginModal/LoginModal';
 import { Navbar } from './components/navbar/Navbar';
 import { Sidebar } from './components/sidebar/Sidebar';
 
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <GymPoster/>
-      <Sidebar/>
+      <LoginModal/>
+      {/* <Sidebar/> */}
       <GymType/>
       <Routes>
       {/* <Route path="/" element={<Login/>}></Route> 

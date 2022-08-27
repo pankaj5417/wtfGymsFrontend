@@ -6,7 +6,7 @@ left: 0;
   height: calc(100vh - 50px);
   overflow-y: scroll;
   margin-left: 0;
-  display: none;
+  /* display: none; */
   color: white;
   font-weight: 400;
 }
@@ -23,10 +23,10 @@ left: 0;
 ::-webkit-scrollbar-thumb {
   background-color: rgb(179, 179, 179);
 }
-/* .closemenu{
-  margin-top: -50px;
-  z-index: 99999;
-} */
+.closemenu{
+  cursor: pointer;
+  margin-left: 230px;
+}
 .sidebarWrapper {
   padding: 20px;
 }

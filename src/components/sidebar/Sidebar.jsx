@@ -1,28 +1,21 @@
-import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import { ProSidebar, Menu, MenuItem,  } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
-import { FaBalanceScale, FaBeer, FaCogs, FaGem, FaHeart, FaChartArea } from "react-icons/fa";
-import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 
 import "./sidebar.css";
 import { useState } from "react";
-export const Sidebar = () => {
-    const [menuCollapse, setMenuCollapse] = useState(false)
+export const Sidebar = ({openSidebar,setOpenSidebar}) => {
+   
     const menuIconClick = () => {
         //condition checking to change state from true to false and vice versa
-        menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+         openSidebar?setOpenSidebar(false):setOpenSidebar(true);
       };
   return (
     <>
-      <ProSidebar className="sidebar" collapsedWidth="30px" width="270px" collapsed={menuCollapse}>
-      <div className="closemenu" onClick={menuIconClick}>
-                {/* changing menu collapse icon on click */}
-                {/* <i class="fa fa-align-left" aria-hidden="true"></i> */}
+      <ProSidebar className="sidebar" collapsedWidth="0px" width="270px" collapsed={openSidebar}>
+      <div className="closemenu" >
+               
+               <i onClick={menuIconClick} class="fa fa-times " aria-hidden="true"></i>
 
-              {menuCollapse ? (
-                 <FiArrowRightCircle/>
-              ) : (
-                <FiArrowLeftCircle/>
-               )} 
             </div>
         <Menu className="sidebarList">
           <MenuItem className="sidebarListItemFirst">
@@ -96,13 +89,7 @@ export const Sidebar = () => {
 
             <span className="sidebarListItemText">TASKS</span>
           </MenuItem>
-          <MenuItem className="sidebarListItem sidebarListItemEffect">
-            <i
-              className="fa fa-ticket sidebarIcon  fa-3xs"
-              aria-hidden="true"
-            ></i>
-
-           </MenuItem>
+          
            </Menu>
       </ProSidebar>
       

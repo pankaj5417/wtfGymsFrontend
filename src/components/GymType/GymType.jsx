@@ -67,7 +67,7 @@ export const GymType = () => {
         console.log("planData",data)
         
       }
-//https://wtfup.me/gym_details/WTF-The-Fitness-Point-Gym/gym/plan
+      
   return (
     <>
       <div className="gymTypeContainer">

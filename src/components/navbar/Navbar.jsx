@@ -1,13 +1,20 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Sidebar } from "../sidebar/Sidebar";
 import "./navbar.css";
 export const Navbar = () => {
+  const [openSidebar,setOpenSidebar]=useState("false")
+  const handlOpenSidebar=()=>{
+    openSidebar ? setOpenSidebar(false) : setOpenSidebar(true);
+  }
   return (
     <>
+    <Sidebar openSidebar={openSidebar} setOpenSidebar={setOpenSidebar}/>
       <div className="navbarContainer">
         <div>
           <ul className="navbarLeft">
             <li className="navbarLeft">
-              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <i onClick={handlOpenSidebar} class="fa fa-align-left hamBar" aria-hidden="true"></i>
 
               <img
               className="wtf-logo"
@@ -18,26 +25,13 @@ export const Navbar = () => {
           </ul>
         </div>
 
-        {/* <ul className="navbarCenter">
-          <li className="navbarSearchBox">
-            <input
-              className="navbarSearchInput"
-              type="search"
-              placeholder="Search..."
-            />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </li>{" "}
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <li>
-            <i class="fa fa-search searchIcon fa-lg" aria-hidden="true"></i>
-          </li>
-        </ul> */}
+        
 
         <div>
           <ul className="navbarRight">
             <li>
               <Link
-                to="/knowledgeBase"
+                to=""
                 style={{ textDecoration: "none", color: "white" }}
               >
                 <span className="navbarRightText">Fitness</span>{" "}
@@ -46,7 +40,7 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/knowledgeBase"
+                to=""
                 style={{ textDecoration: "none", color: "white" }}
               >
                 <span className="navbarRightText">Nutrition</span>{" "}
@@ -55,7 +49,7 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/knowledgeBase"
+                to=""
                 style={{ textDecoration: "none", color: "white" }}
               >
                 <span className="navbarRightText">Gyms</span>{" "}
@@ -64,7 +58,7 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/knowledgeBase"
+                to=""
                 style={{ textDecoration: "none", color: "white" }}
               >
                 <span className="navbarRightText">Become WTF Partner</span>{" "}
@@ -73,7 +67,7 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/knowledgeBase"
+                to=""
                 style={{ textDecoration: "none", color: "white" }}
               >
                 <span className="navbarRightText">About Us</span>{" "}
@@ -82,54 +76,7 @@ export const Navbar = () => {
             </li>
             <div className="loginRegisterButtonContainer">
               <button className="login-button">Login</button>
-              {/* <li>
-                <Link
-                  to="/login2"
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                    cursor: "pointer",
-                  }}
-                >
-                  <i class="fa fa-share fa-lg" aria-hidden="true"></i>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/login2"
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                    cursor: "pointer",
-                  }}
-                >
-                  <i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/login2"
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                    cursor: "pointer",
-                  }}
-                >
-                  <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/login2"
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                    cursor: "pointer",
-                  }}
-                >
-                  <i class="fa fa-bell-o fa-lg" aria-hidden="true"></i>
-                </Link>
-              </li> */}
+              
             </div>
           </ul>
         </div>
