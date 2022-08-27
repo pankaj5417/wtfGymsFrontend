@@ -2,7 +2,6 @@ import { ProSidebar, Menu, MenuItem,  } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 
 import "./sidebar.css";
-import { useState } from "react";
 export const Sidebar = ({openSidebar,setOpenSidebar}) => {
    
     const menuIconClick = () => {

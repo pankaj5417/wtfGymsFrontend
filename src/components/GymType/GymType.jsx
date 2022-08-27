@@ -3,6 +3,7 @@ import { useState } from "react";
 import { debounce } from "lodash";
 
 import "./gymType.css";
+import { Link } from "react-router-dom";
 export const GymType = () => {
   const [gymData, setgymData] = useState();
   const [rating, setRating] = useState(0);
@@ -42,24 +43,9 @@ export const GymType = () => {
     console.log("gym2", data.data);
     setgymData(data.data.filter(d=>d.gym_name.toLocaleLowerCase().includes(gymname)));
   }
-/*
-  async function getGymPlan() {
-    const res = await fetch(
-      "https://wtfup.me/gym_details/WTF-The-Fitness-Point-Gym/gym/plan",
-      {
-        method: "POST",
 
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify("GLKdIYAWDS2Q8"),
-      }
-    );
-    const data = await res.json();
-    console.log("planData", data);
-  }
-  */
+  
+  
 
   return (
     <>
@@ -148,7 +134,9 @@ export const GymType = () => {
 
                     <div className="gymPrice">
                       <h3 style={{color:"#FBC02D",fontWeight:"700"}}>{data.plan_price?"₹ "+data.plan_price+" for 3 months":""}</h3>
+                      <Link to="/planPage" state={data}>
                       <button className="bookNow-button">Book Now</button>
+                      </Link>
                     </div>
                   </div>
                 </div>

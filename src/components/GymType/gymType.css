@@ -54,11 +54,14 @@
 }
 .gymFilters {
   width: 25%;
+  min-width: 350px;
   color: white;
   padding: 2rem;
 }
 .gymResults {
   width: 69%;
+  min-width: 500px;
+
   height: 80vh;
   overflow-y: scroll;
   margin: 6px;
@@ -66,6 +69,7 @@
 }
 .gymResultsContainer {
   width: 100%;
+  min-width: 400px;
   height: 300px;
   border-radius: 10px;
   display: flex;
@@ -81,6 +85,7 @@
 }
 .gymInfo {
   width: 60%;
+  min-width: 500px;
 }
 .sendIcon{
     color: green;
@@ -165,9 +170,12 @@ button {
   .off {
     color: #ccc;
   }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .gymTypeBottomContainer {
       display: block;
+    }
+    .gymFilters{
+      width: 100%;
     }
     .gymResults{
         width: 100%;
