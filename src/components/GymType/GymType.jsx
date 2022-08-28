@@ -168,7 +168,7 @@ export const GymType = () => {
                         );
                       })}
                     </p>
-                    <p style={{ fontSize: "23px" }}>
+                    <p style={{ fontSize: "18px" }}>
                       {data.address1 + "," + data.address2}
                     </p>
                     <p>

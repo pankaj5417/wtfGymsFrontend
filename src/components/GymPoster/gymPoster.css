@@ -4,6 +4,7 @@
     background-color: #5e0707;
     background: linear-gradient(45deg,#5e0707, #1c18187b);
     height: 70vh;
+    margin-bottom: 50px;
 
 }
 .runningGirlImg{
@@ -41,12 +42,13 @@
 }
 @media screen and (max-width:768px) {
     .gymPosterContainer{
-        height: 55vh;
+        height: 57vh;
     }
     .runningGirlImg{
         width: 150px;
         position: absolute;
         left: 74%;
+        right: 20px;
         top: 120px;
         z-index: 999;
     }
