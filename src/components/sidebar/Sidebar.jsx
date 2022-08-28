@@ -80,15 +80,7 @@ export const Sidebar = ({openSidebar,setOpenSidebar}) => {
 
             <span className="sidebarListItemText">Login/Signup</span>
           </MenuItem>
-          <MenuItem className="sidebarListItem sidebarListItemEffect">
-            <i
-              className="fa fa-tasks sidebarIcon  fa-3xs"
-              aria-hidden="true"
-            ></i>
-
-            <span className="sidebarListItemText">TASKS</span>
-          </MenuItem>
-          
+         
            </Menu>
       </ProSidebar>
       

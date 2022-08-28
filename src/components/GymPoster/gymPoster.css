@@ -41,13 +41,13 @@
 }
 @media screen and (max-width:768px) {
     .gymPosterContainer{
-        height: 54vh;
+        height: 55vh;
     }
     .runningGirlImg{
         width: 150px;
         position: absolute;
         left: 74%;
-        top: 125px;
+        top: 120px;
         z-index: 999;
     }
     .runningBoyImg{
@@ -55,7 +55,7 @@
 
         position: absolute;
         
-        left: 2%;
+        left: 30px;
         top: 185px;
         z-index: 99; 
     }
