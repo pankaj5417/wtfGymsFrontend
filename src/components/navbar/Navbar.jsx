@@ -4,13 +4,36 @@ import { Sidebar } from "../sidebar/Sidebar";
 import "./navbar.css";
 export const Navbar = () => {
   const [openSidebar, setOpenSidebar] = useState("false");
+  const [bgColor,setbgColor]=useState("")
+
+  const [colorChange, setColorchange] = useState(false);
+  /*
+  const changeNavbarColor = () =>{
+     if(window.scrollY >= 80){
+       setColorchange(true);
+     }
+     else{
+       setColorchange(false);
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
+*/
+  const handlebgColor=()=>{
+    if(window.scrollY >= 80){
+      setbgColor("black")
+    }
+    else{
+      setbgColor("transparent")
+    }
+  }
+  window.addEventListener('scroll', handlebgColor);
   const handlOpenSidebar = () => {
     openSidebar ? setOpenSidebar(false) : setOpenSidebar(true);
   };
   return (
     <>
       <Sidebar openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
-      <div className="navbarContainer">
+      <div className={`navbarContainer ${colorChange?"navbarScroll":""}` }style={{backgroundColor:`${bgColor}`}} >
         <div>
           <ul className="navbarLeft">
             <li className="navbarLeft">
