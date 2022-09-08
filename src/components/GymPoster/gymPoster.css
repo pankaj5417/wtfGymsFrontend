@@ -3,14 +3,15 @@
     min-width: 700px;
     background-color: #5e0707;
     background: linear-gradient(45deg,#5e0707, #1c18187b);
-    height: 70vh;
+    height: 660px;
     margin-bottom: 50px;
 
 }
 .runningGirlImg{
     position: absolute;
     left: 20%;
-    top: 96px;
+    top: 136px;
+   
     z-index: 999;
 }
 .runningBoyImg{
@@ -42,12 +43,14 @@
 }
 @media screen and (max-width:768px) {
     .gymPosterContainer{
-        height: 57vh;
+       
+        height: 460px;
+        margin-bottom: 50px;
     }
     .runningGirlImg{
         width: 150px;
         position: absolute;
-        left: 74%;
+        left: 500px;
         right: 20px;
         top: 120px;
         z-index: 999;
@@ -79,7 +82,7 @@
         font-weight: 800;
         color: white;
         margin-top: 300px;
-        left: 58%;
+        left: 460px;
         z-index: 999;
     }
 }
